@@ -1,0 +1,218 @@
+:root {
+	--color-black: #181818;
+	--color-white: #ffffff;
+}
+.header--two {
+	padding-bottom: 12px;
+	padding-left: 11px;
+	max-width: 1168px;
+	margin: 0 auto;
+}
+
+.logo--two {
+	display: block;
+	margin-top: -6px;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 42px;
+	color: #0f2a59;
+}
+
+.header-bar--two {
+	margin-left: -180px;
+	display: flex;
+	align-items: center;
+}
+
+.header-splitter--two {
+	width: 20px;
+	color: #e8e8e8;
+	text-align: center;
+	padding: 15px 20px;
+	flex-grow: 0;
+}
+
+.header-link--two {
+	cursor: pointer;
+	position: relative;
+	margin-right: 15px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 17px;
+	color: #181818;
+}
+
+.header-link--two::after {
+	cursor: pointer;
+	content: '';
+	position: absolute;
+	top: 5px;
+	right: -20px;
+	background: url(../img/Stroke1.png) no-repeat;
+	width: 10px;
+	height: 10px;
+}
+
+.header-languages--two {
+	margin-right: 210px;
+	margin-top: -5px;
+	display: flex;
+	padding: 10px;
+}
+
+.header-languages-from--two {
+	padding-top: 3px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 17px;
+	color: var(--color-black);
+}
+
+.header-languages-kg {
+	margin-left: 5px;
+	margin-right: 11px;
+}
+
+.header-languages-rus {
+	margin-right: 5px;
+}
+
+#menu-toggle--two {
+	opacity: 0;
+}
+
+.hamburger-menu--two {
+	display: none;
+	position: relative;
+	width: 44px;
+}
+
+#menu-toggle:checked ~ .menu-btn > span {
+	transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before {
+	top: 0;
+	transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menu-box {
+	visibility: visible;
+	left: 0;
+}
+
+.main-pages h1 {
+	padding: 20px 0px 50px 0px;
+}
+
+.main-pages p {
+	font-size: 13px;
+}
+
+.menu-btn--two {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 9px;
+	left: 9px;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+	display: block;
+	position: absolute;
+
+	width: 100%;
+	height: 3px;
+
+	background-color: #0f2a59;
+
+	transition-duration: 0.25s;
+}
+.menu-btn > span::before {
+	content: '';
+	top: -8px;
+}
+.menu-btn > span::after {
+	content: '';
+	top: 8px;
+}
+
+.menu-box {
+	display: block;
+	position: fixed;
+	visibility: hidden;
+	z-index: 10;
+	top: 0;
+	left: -100%;
+	width: 300px;
+	height: 100%;
+	margin: 0;
+	padding: 80px 0;
+	list-style: none;
+	background-color: #eceff1;
+	box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+	transition-duration: 0.25s;
+}
+
+.menu-item {
+	display: block;
+	padding: 12px 24px;
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	text-decoration: none;
+	transition-duration: 0.25s;
+}
+.menu-item:hover {
+	background-color: #cfd8dc;
+}
+
+@media (max-width: 1377px) {
+	header {
+		padding: 10px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.header-bar--two {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 600px) {
+	.header-bar--two {
+		display: none;
+	}
+	.header-languages--two {
+		align-items: center;
+		margin: 3px 20px 0px 0px;
+	}
+	.logo {
+		margin-top: 0.5px;
+	}
+}
+
+@media (min-width: 600px) {
+	#menu {
+		display: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.hamburger-menu--two {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
